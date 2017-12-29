@@ -1,0 +1,20 @@
+<div [@dialog] *ngIf="visible" class="dialog">
+<p>
+  squareroot works!
+</p>
+<div class = "container">
+
+        <h1>SQUARE ROOT</h1>
+        <form>
+           
+           <div class = "form-group">
+              <label for = "operanta">operant-1</label>
+              <app-home (outputemit)="operantfa($event)"></app-home>
+                 {{operanta}}
+           </div>
+           
+        </form>
+        <button class='btn btn-primary' (click) = "squarerootdata(); close();">Square Root</button>
+     </div>
+       <button *ngIf="closable" (click)="close()" aria-label="Close" class="dialog__close-btn">X</button>
+</div>

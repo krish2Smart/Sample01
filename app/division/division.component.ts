@@ -1,4 +1,16 @@
-import { Component, OnInit, Input, Output, OnChanges, EventEmitter, trigger, state, style, animate, transition } from '@angular/core';
+import { 
+	Component, 
+	OnInit, 
+	Input, 
+	Output, 
+	OnChanges, 
+	EventEmitter, 
+	trigger, 
+	state, 
+	style, 
+	animate, 
+	transition 
+} from '@angular/core';
 
 @Component({
   selector: 'app-division',

@@ -1,5 +1,5 @@
 import { 
-	Component,
+	Component, 
 	OnInit, 
 	Input, 
 	Output, 
@@ -13,9 +13,9 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'app-multiply',
-  templateUrl: './multiply.component.html',
-  styleUrls: ['./multiply.component.css'],
+  selector: 'app-powerof',
+  templateUrl: './powerof.component.html',
+  styleUrls: ['./powerof.component.css'],
   animations: [
     trigger('dialog', [
       transition('void => *', [
@@ -28,15 +28,15 @@ import {
     ])
   ]
 })
+export class PowerofComponent implements OnInit {
 
-export class MultiplyComponent implements OnInit {
-	@Input() closable = true;
+  @Input() closable = true;
 	@Input() visible: boolean;
 	@Output() visibleChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
 	operanta: number;
 	operantb: number;
-	multiplyobject =  {
+	powerofobject =  {
 	  text: "",
 	  value: 0
 	};
@@ -50,13 +50,12 @@ export class MultiplyComponent implements OnInit {
 	}
   
 	@Output()
-		multiply: EventEmitter<any> = new EventEmitter();
+		powerof: EventEmitter<any> = new EventEmitter();
 
-	multiplydata() {
-		this.multiplyobject['text'] = "multiply(" + this.operanta  + "," + this.operantb + ")" ;
-		this.multiplyobject['value'] = (this.operanta * this.operantb);
-		this.multiply.emit(this.multiplyobject);
-		console.log(this.multiplyobject.text + (this.operanta * this.operantb));
+	powerofdata() {
+		this.powerofobject['text'] = "powerof(" + this.operanta  + "," + this.operantb + ")" ;
+		this.powerofobject['value'] = Math.pow(this.operanta, this.operantb);
+		this.powerof.emit(this.powerofobject);
 	}
 	constructor() { }
 
@@ -67,4 +66,5 @@ export class MultiplyComponent implements OnInit {
 		this.visible = false;
 		this.visibleChange.emit(this.visible);
 	}
+
 }

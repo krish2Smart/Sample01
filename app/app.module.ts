@@ -15,6 +15,8 @@ import { PageComponent } from './page/page.component';
 import { ValueComponent } from './value/value.component';
 import { DisplayComponent } from './display/display.component';
 import { DivisionComponent } from './division/division.component';
+import { PowerofComponent } from './powerof/powerof.component';
+import { SquarerootComponent } from './squareroot/squareroot.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { DivisionComponent } from './division/division.component';
     PageComponent,
     ValueComponent,
     DisplayComponent,
-    DivisionComponent
+    DivisionComponent,
+    PowerofComponent,
+    SquarerootComponent
   ],
   imports: [
     BrowserModule,

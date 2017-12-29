@@ -1,4 +1,9 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { 
+  Component, 
+  OnInit, 
+  Output, 
+  EventEmitter 
+} from '@angular/core';
 import { Select2OptionData } from 'ng2-select2';
 
 @Component({
@@ -18,6 +23,8 @@ export class HomeComponent implements OnInit {
     subDialog : false,
     multiplyDialog : false,
     divisionDialog : false,
+    powerofDialog : false,
+    squarerootDialog : false,
     value: false,
   };
 
@@ -63,6 +70,14 @@ export class HomeComponent implements OnInit {
       {
         id: 'divisionDialog',
         text: 'division' 
+      },
+      {
+        id: 'powerofDialog',
+        text: 'powerof' 
+      },
+      {
+        id: 'squarerootDialog',
+        text: 'squareroot' 
       },
       {
         id: 'display',

@@ -6,17 +6,16 @@
     {{displayobj['text']}} {{displayobj['value']}}
 </div>
 
-<app-add [(visible)]="data['addDialog']" (add) = "onCreateContent($event)">
-</app-add>
+<app-add [(visible)]="data['addDialog']" (add) = "onCreateContent($event)"></app-add>
 
-<app-sub [(visible)]="data['subDialog']" (add) = "onCreateContent($event)">
-</app-sub>
+<app-sub [(visible)]="data['subDialog']" (add) = "onCreateContent($event)"></app-sub>
 
-<app-multiply [(visible)]="data['multiplyDialog']" (multiply) = "onCreateContent($event)">
-</app-multiply>
+<app-multiply [(visible)]="data['multiplyDialog']" (multiply) = "onCreateContent($event)"></app-multiply>
 
-<app-division [(visible)]="data['divisionDialog']" (division) = "onCreateContent($event)">
-</app-division>
+<app-division [(visible)]="data['divisionDialog']" (division) = "onCreateContent($event)"></app-division>
 
-<app-value [(visible)]="data['value']" (add) = "onCreateContent($event)">
-</app-value>
+<app-powerof [(visible)]="data['powerofDialog']" (powerof) = "onCreateContent($event)"></app-powerof>
+
+<app-squareroot [(visible)]="data['squarerootDialog']" (squareroot) = "onCreateContent($event)"></app-squareroot>
+
+<app-value [(visible)]="data['value']" (add) = "onCreateContent($event)"></app-value>

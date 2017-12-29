@@ -1,5 +1,5 @@
 import { 
-	Component,
+	Component, 
 	OnInit, 
 	Input, 
 	Output, 
@@ -13,9 +13,9 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'app-multiply',
-  templateUrl: './multiply.component.html',
-  styleUrls: ['./multiply.component.css'],
+  selector: 'app-squareroot',
+  templateUrl: './squareroot.component.html',
+  styleUrls: ['./squareroot.component.css'],
   animations: [
     trigger('dialog', [
       transition('void => *', [
@@ -28,15 +28,14 @@ import {
     ])
   ]
 })
+export class SquarerootComponent implements OnInit {
 
-export class MultiplyComponent implements OnInit {
-	@Input() closable = true;
+  	@Input() closable = true;
 	@Input() visible: boolean;
 	@Output() visibleChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
 	operanta: number;
-	operantb: number;
-	multiplyobject =  {
+	squarerootobject =  {
 	  text: "",
 	  value: 0
 	};
@@ -45,18 +44,13 @@ export class MultiplyComponent implements OnInit {
 	  this.operanta = num;
 	}
   
-	operantfb(num) {
-	  this.operantb = num;
-	}
-  
 	@Output()
-		multiply: EventEmitter<any> = new EventEmitter();
+		squareroot: EventEmitter<any> = new EventEmitter();
 
-	multiplydata() {
-		this.multiplyobject['text'] = "multiply(" + this.operanta  + "," + this.operantb + ")" ;
-		this.multiplyobject['value'] = (this.operanta * this.operantb);
-		this.multiply.emit(this.multiplyobject);
-		console.log(this.multiplyobject.text + (this.operanta * this.operantb));
+	squarerootdata() {
+		this.squarerootobject['text'] = "squareroot(" + this.operanta + ")" ;
+		this.squarerootobject['value'] = Math.sqrt(this.operanta);
+		this.squareroot.emit(this.squarerootobject);
 	}
 	constructor() { }
 
@@ -67,4 +61,5 @@ export class MultiplyComponent implements OnInit {
 		this.visible = false;
 		this.visibleChange.emit(this.visible);
 	}
+
 }
