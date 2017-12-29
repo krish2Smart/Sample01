@@ -1,0 +1,22 @@
+<div [hidden]="returned">
+    <select2 (valueChanged)="changedtopic($event)" [data]="exampleData"></select2>
+</div>
+
+<div [hidden]="!returned">
+    {{displayobj['text']}} {{displayobj['value']}}
+</div>
+
+<app-add [(visible)]="data['addDialog']" (add) = "onCreateContent($event)">
+</app-add>
+
+<app-sub [(visible)]="data['subDialog']" (add) = "onCreateContent($event)">
+</app-sub>
+
+<app-multiply [(visible)]="data['multiplyDialog']" (multiply) = "onCreateContent($event)">
+</app-multiply>
+
+<app-division [(visible)]="data['divisionDialog']" (division) = "onCreateContent($event)">
+</app-division>
+
+<app-value [(visible)]="data['value']" (add) = "onCreateContent($event)">
+</app-value>
